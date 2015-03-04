@@ -1,9 +1,5 @@
 = sentry
 
-* {Homepage}[https://rubygems.org/gems/sentry]
-* {Documentation}[http://rubydoc.info/gems/sentry/frames]
-* {Email}[mailto:apersson.93 at gmail.com]
-
 == Description
 
 TODO: Description
