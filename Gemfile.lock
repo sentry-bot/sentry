@@ -1,142 +1,137 @@
-GIT
-  remote: https://github.com/jriddick/sentry-helper.git
-  revision: e4284cc352635b7b4081f2ca75711cb102caf201
-  specs:
-    sentry-helper (0.1.0)
-
 PATH
   remote: .
   specs:
     sentry (0.1.0)
-      cinch
-      cinch-identify
-      colorize
-      daemons
-      eventmachine
-      thor
-
-PATH
-  remote: ~/Projects/sentry/sentry-github
-  specs:
-    sentry-github (0.1.0)
-      actionpack
-      cinch
-      octokit
-      sentry-helper
-      twitter-text
-
-PATH
-  remote: ~/Projects/sentry/sentry-reddit
-  specs:
-    sentry-reddit (0.1.0)
-      cinch
-      redditkit
-      sentry-helper
-      twitter-text
-
-PATH
-  remote: ~/Projects/sentry/sentry-titles
-  specs:
-    sentry-titles (0.0.1)
-      cinch
-      nokogiri
-      open_uri_redirections
-      sentry-titles
-      twitter-text
-
-PATH
-  remote: ~/Projects/sentry/sentry-videos
-  specs:
-    sentry-videos (0.1.0)
-      chronic
-      chronic_duration
-      cinch
-      sentry-helper
-      twitter-text
-      video_info
+      cinch (~> 2.0)
+      cinch-identify (~> 1.7)
+      colorize (~> 0.7)
+      daemons (~> 1.2)
+      eventmachine (~> 1.0.9)
+      sentry-github (~> 0.1)
+      sentry-helper (~> 0.1)
+      sentry-reddit (~> 0.1)
+      sentry-titles (~> 0.1)
+      sentry-videos (~> 0.1)
+      thor (~> 0.19)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (4.2.0)
-      actionview (= 4.2.0)
-      activesupport (= 4.2.0)
-      rack (~> 1.6.0)
+    actionpack (4.2.5.1)
+      actionview (= 4.2.5.1)
+      activesupport (= 4.2.5.1)
+      rack (~> 1.6)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-      rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    actionview (4.2.0)
-      activesupport (= 4.2.0)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionview (4.2.5.1)
+      activesupport (= 4.2.5.1)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-      rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    activesupport (4.2.0)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    activesupport (4.2.5.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.7)
+    addressable (2.3.8)
+    ansi (1.5.0)
+    ast (2.2.0)
     builder (3.2.2)
     chronic (0.10.2)
     chronic_duration (0.10.6)
       numerizer (~> 0.1.1)
-    cinch (2.2.4)
-    cinch-identify (1.6.0)
+    cinch (2.3.1)
+    cinch-identify (1.7.0)
       cinch (~> 2.0)
-    colorize (0.7.5)
-    daemons (1.1.9)
+    colorize (0.7.7)
+    daemons (1.2.3)
     erubis (2.7.0)
-    eventmachine (1.0.7)
-    faraday (0.9.1)
+    eventmachine (1.0.9.1)
+    faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    htmlentities (4.3.3)
+    htmlentities (4.3.4)
     i18n (0.7.0)
-    json (1.8.2)
-    loofah (2.0.1)
+    iso8601 (0.9.0)
+    json (1.8.3)
+    loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    mini_portile (0.6.2)
-    minitest (5.5.1)
-    multi_json (1.11.0)
+    mini_portile2 (2.0.0)
+    minitest (5.8.4)
+    multi_json (1.11.2)
     multipart-post (2.0.0)
-    nokogiri (1.6.6.2)
-      mini_portile (~> 0.6.0)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     numerizer (0.1.1)
-    octokit (3.8.0)
+    octokit (4.2.0)
       sawyer (~> 0.6.0, >= 0.5.3)
+    oga (2.0.0)
+      ast
+      ruby-ll (~> 2.1)
     open_uri_redirections (0.2.1)
-    rack (1.6.0)
+    rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.5)
+    rails-dom-testing (1.0.7)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
-    rails-html-sanitizer (1.0.1)
+    rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     redditkit (1.0.2)
       faraday (~> 0.8)
       htmlentities (~> 4.3)
       multi_json (~> 1.8)
+    ruby-ll (2.1.2)
+      ansi
+      ast
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
+    sentry-github (0.1.0)
+      actionpack (~> 4.2)
+      cinch (~> 2.0)
+      octokit (~> 4.0)
+      sentry-helper (~> 0.1.0)
+      twitter-text (~> 1.13)
+    sentry-helper (0.1.0)
+    sentry-reddit (0.1.0)
+      cinch (~> 2.0)
+      redditkit (~> 1.0)
+      sentry-helper (~> 0.1.0)
+      twitter-text (~> 1.13)
+    sentry-titles (0.1.0)
+      cinch (~> 2.0)
+      nokogiri (~> 1.6)
+      open_uri_redirections (~> 0.2)
+      twitter-text (~> 1.13)
+    sentry-videos (0.1.0)
+      chronic (~> 0.10)
+      chronic_duration (~> 0.10)
+      cinch (~> 2.0)
+      sentry-helper (~> 0.1.0)
+      twitter-text (~> 1.13)
+      video_info (~> 2.5)
     thor (0.19.1)
-    thread_safe (0.3.4)
-    twitter-text (1.11.0)
+    thread_safe (0.3.5)
+    twitter-text (1.13.3)
       unf (~> 0.1.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.6)
-    video_info (2.4.0)
+    unf_ext (0.0.7.2)
+    video_info (2.5.0)
       addressable
       htmlentities
-      multi_json
+      iso8601
+      multi_json (~> 1.11)
+      oga
+      open_uri_redirections
 
 PLATFORMS
   ruby
@@ -144,8 +139,6 @@ PLATFORMS
 DEPENDENCIES
   bundler
   sentry!
-  sentry-github!
-  sentry-helper!
-  sentry-reddit!
-  sentry-titles!
-  sentry-videos!
+
+BUNDLED WITH
+   1.11.2

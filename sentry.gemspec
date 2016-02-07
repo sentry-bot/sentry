@@ -17,13 +17,19 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'thor'
-  gem.add_dependency 'daemons'
-  gem.add_dependency 'colorize'
-  gem.add_dependency 'eventmachine'
+  gem.add_dependency 'thor', '~> 0.19'
+  gem.add_dependency 'daemons', '~> 1.2'
+  gem.add_dependency 'colorize', '~> 0.7'
+  gem.add_dependency 'eventmachine', '~> 1.0.9'
 
-  gem.add_dependency 'cinch'
-  gem.add_dependency 'cinch-identify'
+  gem.add_dependency 'cinch', '~> 2.0'
+  gem.add_dependency 'cinch-identify', '~> 1.7'
+
+  gem.add_dependency 'sentry-helper', '~> 0.1'
+  gem.add_dependency 'sentry-github', '~> 0.1'
+  gem.add_dependency 'sentry-reddit', '~> 0.1'
+  gem.add_dependency 'sentry-titles', '~> 0.1'
+  gem.add_dependency 'sentry-videos', '~> 0.1'
 
   gem.add_development_dependency 'bundler'
 end
