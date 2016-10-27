@@ -16,6 +16,16 @@ channels:
     - "#chan"
 
 plugins:
+    identify:
+        enabled: true
+        password: password
     reddit:
+        enabled: true
         username: user
         password: pass
+    youtube:
+        enabled: true
+        apikey: apikey
+    vimeo:
+        enabled: true
+        apikey: apikey
