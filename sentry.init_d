@@ -52,7 +52,7 @@ start() {
 
   # Ensure the log directory is setup correctly.
   [ ! -d "/var/log/sentry" ] && mkdir "/var/log/sentry"
-  chown "$user":"$group" "/var/log"
+  chown "$user":"$group" "/var/log/sentry"
   chmod 755 "/var/log/sentry"
 
 
