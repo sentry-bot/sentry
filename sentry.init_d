@@ -51,9 +51,9 @@ emit() {
 start() {
 
   # Ensure the log directory is setup correctly.
-  [ ! -d "/var/log" ] && mkdir "/var/log"
+  [ ! -d "/var/log/sentry" ] && mkdir "/var/log/sentry"
   chown "$user":"$group" "/var/log"
-  chmod 755 "/var/log"
+  chmod 755 "/var/log/sentry"
 
 
   # Setup any environmental stuff beforehand
@@ -65,7 +65,7 @@ start() {
     
     cd \"$chdir\"
     exec \"$program\" $args
-  " >> /var/log/sentry-stdout.log 2>> /var/log/sentry-stderr.log &
+  " >> /var/log/sentry/sentry-stdout.log 2>> /var/log/sentry/sentry-stderr.log &
 
   # Generate the pidfile from here. If we instead made the forked process
   # generate it there will be a race condition between the pidfile writing
