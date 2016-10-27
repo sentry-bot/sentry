@@ -1,26 +1,26 @@
 #!/usr/bin/env ruby
 
 require 'thor'
-require 'daemons'
 require 'eventmachine'
 require 'sentry'
+require 'yaml'
 
 class SentryRunner < Thor
   default_task :help
 
   desc "start", "start the bot"
   def start
-    # Prepare the daemon
-    Daemons.daemonize(
-      :app_name => "sentry",
-      :dir_mode => :normal,
-      :log_dir => File.join(File.dirname(File.dirname(__FILE__)), 'logs'),
-      :log_output => true,
-      :dir => File.join('/', 'tmp')
-    )
+    # Load configuration file
+    config = YAML.load_file(File.join(File.dirname(File.dirname(__FILE__)), 'config.yml'))
+   
+    # We need the configuration file
+    if config.nil? 
+        puts "Missing configuration file (did you forget to rename config.yml.example?)"
+        return
+    end
 
     # Get the bot
-    bot = Sentry.new
+    bot = Sentry.new(config)
 
     EM.run {
       # Stop when requested
@@ -33,19 +33,6 @@ class SentryRunner < Thor
 
     # Exit the bot
     bot.quit
-  end
-
-  desc "stop", "stop the bot"
-  def stop
-    pid_file = File.join("/", "tmp", "sentry.pid")
-    pid = File.read(pid_file).to_i if File.exist?(pid_file)
-    Process.kill('TERM', pid) if not pid.nil?
-  end
-
-  desc "restart", "restart the bot"
-  def restart
-    stop
-    start
   end
 end
 
