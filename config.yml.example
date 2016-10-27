@@ -1,0 +1,21 @@
+irc:
+    host: irc.oftc.net
+    port: 6697
+    ssl: true
+
+bot:
+    nick: sentry
+    user: sentry
+    name: sentry
+
+security:
+    ssl:
+        verify: false
+
+channels:
+    - "#chan"
+
+plugins:
+    reddit:
+        username: user
+        password: pass
