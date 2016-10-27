@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/samsymons/RedditKit.rb
+  revision: 81accdfe3dd551879371e736d1f2123c53f1aa91
+  specs:
+    redditkit (1.0.2)
+      faraday (~> 0.8)
+      htmlentities (~> 4.3)
+      multi_json (~> 1.8)
+
 PATH
   remote: .
   specs:
@@ -82,10 +91,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    redditkit (1.0.2)
-      faraday (~> 0.8)
-      htmlentities (~> 4.3)
-      multi_json (~> 1.8)
     ruby-ll (2.1.2)
       ansi
       ast
@@ -138,7 +143,8 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  redditkit!
   sentry!
 
 BUNDLED WITH
-   1.11.2
+   1.13.1
