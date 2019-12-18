@@ -85,7 +85,7 @@ GEM
       ruby-ll (~> 2.1)
     open_uri_redirections (0.2.1)
     public_suffix (3.0.3)
-    rack (1.6.11)
+    rack (1.6.12)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
